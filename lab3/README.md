@@ -20,9 +20,9 @@
 ## Запуск проекта
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/kira-ko/algs_labs.git
+   git clone https://github.com/kira-ko/algoritms_labs.git
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd algs_labs/lab3
+   cd algoritms_labs/lab3
    ```
