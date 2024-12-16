@@ -48,7 +48,7 @@ Input / Output
    ```
 3. Запустите программу:
    ```bash
-   python task3/src/main.py
+   python task3/src/test1.py
    ```
 ## Тестирование
 
