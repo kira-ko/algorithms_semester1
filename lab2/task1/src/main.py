@@ -1,28 +1,41 @@
 import sys
 import os
 
-'''Поиск максимального подмассива'''
-def max_subarray(array):
-    mx_summ = 0
-    summ = 0
-    for i in range(len(array)):
-        if summ == 0:
-            start = i
-        summ += array[i]
-        if mx_summ < summ:
-            mx_summ = summ
-            finish = i
-        if summ < 0:
-            summ = 0
-    return array[start:finish + 1]
+'''Сортировка слиянием'''
+def merge_sort(array):
+    if len(array) > 1:
+        mid = len(array) // 2
+        left = array[:mid]
+        right = array[mid:]
+        merge_sort(left)
+        merge_sort(right)
 
+        i = j = k = 0
+        while i < len(left) and j < len(right):
+            if left[i] < right[j]:
+                array[k] = left[i]
+                i += 1
+            else:
+                array[k] = right[j]
+                j += 1
+            k += 1
+
+        while i < len(left):
+            array[k] = left[i]
+            i += 1
+            k += 1
+        while j < len(right):
+            array[k] = right[j]
+            j += 1
+            k += 1
+    return array
 
 def main(input_data, output_file):
     lines = input_data.strip().split("\n")
     n = int(lines[0])  # Число элементов
     arr = list(map(int, lines[1].split()))  # Массив чисел
 
-    result = max_subarray(arr) # Сортируем массив
+    result = merge_sort(arr) # Сортируем массив
 
     output_file.write(" ".join(map(str, result)))  # Записываем результат
 
