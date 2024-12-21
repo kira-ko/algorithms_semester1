@@ -5,9 +5,9 @@
 
 ### Навыигация по репозиторию:
 
-лабораторная работа №0:  
+лабораторная работа №0: [lab0](https://github.com/kira-ko/algoritms_labs/tree/main/lab0)
 
-лабораторная работа №1: 
+лабораторная работа №1: [lab1](https://github.com/kira-ko/algoritms_labs/tree/main/lab1)
 
 лабораторная работа №2: [lab2](https://github.com/kira-ko/algoritms_labs/tree/main/lab2)
 
