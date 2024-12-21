@@ -1,25 +1,61 @@
 import os
 import sys
 
+class ThreadedMap:
+    def __init__(self):
+        self.map = {}
+        self.order = []
+
+    def put(self, key, value):
+        if key not in self.map:
+            self.order.append(key)
+        self.map[key] = value
+
+    def delete(self, key):
+        if key in self.map:
+            del self.map[key]
+            self.order.remove(key)
+
+    def get(self, key):
+        return self.map.get(key, "<none>")
+
+    def prev(self, key):
+        if key not in self.map:
+            return "<none>"
+        idx = self.order.index(key)
+        return self.map[self.order[idx - 1]] if idx > 0 else "<none>"
+
+    def next(self, key):
+        if key not in self.map:
+            return "<none>"
+        idx = self.order.index(key)
+        return self.map[self.order[idx + 1]] if idx < len(self.order) - 1 else "<none>"
+
+
 def process_operations(operations):
     """
-    Выполняет операции над множеством.
+    Выполняет операции над прошитым ассоциативным массивом.
     :param operations: Список строк операций
-    :return: Список результатов для операций "? x"
+    :return: Список результатов для операций "get", "prev", "next"
     """
     result = []
-    custom_set = set()
+    threaded_map = ThreadedMap()
 
     for operation in operations:
-        op_type, x = operation.split()
-        x = int(x)
+        parts = operation.split()
+        command, key = parts[0], parts[1]
 
-        if op_type == "A":
-            custom_set.add(x)
-        elif op_type == "D":
-            custom_set.discard(x)
-        elif op_type == "?":
-            result.append("Y" if x in custom_set else "N")
+        if command == "put":
+            value = parts[2]
+            threaded_map.put(key, value)
+        elif command == "delete":
+            threaded_map.delete(key)
+        elif command == "get":
+            result.append(threaded_map.get(key))
+        elif command == "prev":
+            result.append(threaded_map.prev(key))
+        elif command == "next":
+            result.append(threaded_map.next(key))
 
     return result
 

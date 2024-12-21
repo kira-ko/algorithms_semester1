@@ -1,27 +1,20 @@
 import os
 import sys
+from collections import defaultdict
 
-def process_operations(operations):
+def calculate_votes(input_lines):
     """
-    Выполняет операции над множеством.
-    :param operations: Список строк операций
-    :return: Список результатов для операций "? x"
+    Подсчитывает количество голосов для каждого кандидата.
+    :param input_lines: Список строк входного файла
+    :return: Словарь с подсчетом голосов {кандидат: количество голосов}
     """
-    result = []
-    custom_set = set()
+    vote_count = defaultdict(int)
 
-    for operation in operations:
-        op_type, x = operation.split()
-        x = int(x)
+    for line in input_lines:
+        candidate, votes = line.rsplit(maxsplit=1)
+        vote_count[candidate] += int(votes)
 
-        if op_type == "A":
-            custom_set.add(x)
-        elif op_type == "D":
-            custom_set.discard(x)
-        elif op_type == "?":
-            result.append("Y" if x in custom_set else "N")
-
-    return result
+    return vote_count
 
 
 def main(input_data, output_file):
@@ -31,14 +24,13 @@ def main(input_data, output_file):
     :param output_file: Объект файла для записи вывода
     """
     lines = input_data.strip().split("\n")
-    n = int(lines[0])
-    operations = lines[1:]
 
-    # Обрабатываем операции
-    results = process_operations(operations)
+    # Подсчитываем голоса
+    vote_count = calculate_votes(lines)
 
-    # Записываем результаты в файл
-    output_file.write("\n".join(results) + "\n")
+    # Сортируем кандидатов в лексикографическом порядке и записываем результат
+    for candidate in sorted(vote_count):
+        output_file.write(f"{candidate} {vote_count[candidate]}\n")
 
 
 if __name__ == '__main__':
@@ -63,3 +55,4 @@ if __name__ == '__main__':
         print(f"Результат успешно записан в файл '{output_path}'")
     except Exception as e:
         print(f"Ошибка при обработке: {e}")
+

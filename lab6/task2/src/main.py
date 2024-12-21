@@ -1,43 +1,39 @@
 import os
 import sys
 
-def process_operations(operations):
-    """
-    Выполняет операции над множеством.
-    :param operations: Список строк операций
-    :return: Список результатов для операций "? x"
-    """
+
+def process_queries(input_data):
+    phonebook = {}
     result = []
-    custom_set = set()
 
-    for operation in operations:
-        op_type, x = operation.split()
-        x = int(x)
+    for line in input_data.strip().split("\n"):
+        parts = line.split()
+        command = parts[0]
 
-        if op_type == "A":
-            custom_set.add(x)
-        elif op_type == "D":
-            custom_set.discard(x)
-        elif op_type == "?":
-            result.append("Y" if x in custom_set else "N")
+        if command == "add":
+            number = parts[1]
+            name = parts[2]
+            phonebook[number] = name
+
+        elif command == "del":
+            number = parts[1]
+            if number in phonebook:
+                del phonebook[number]
+
+        elif command == "find":
+            number = parts[1]
+            if number in phonebook:
+                result.append(phonebook[number])
+            else:
+                result.append("not found")
 
     return result
 
 
 def main(input_data, output_file):
-    """
-    Основная функция для запуска задачи.
-    :param input_data: Строка с содержимым входного файла
-    :param output_file: Объект файла для записи вывода
-    """
-    lines = input_data.strip().split("\n")
-    n = int(lines[0])
-    operations = lines[1:]
+    results = process_queries(input_data)
 
-    # Обрабатываем операции
-    results = process_operations(operations)
-
-    # Записываем результаты в файл
+    # Записываем результаты в выходной файл
     output_file.write("\n".join(results) + "\n")
 
 
@@ -63,3 +59,5 @@ if __name__ == '__main__':
         print(f"Результат успешно записан в файл '{output_path}'")
     except Exception as e:
         print(f"Ошибка при обработке: {e}")
+
+

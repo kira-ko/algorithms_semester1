@@ -38,9 +38,9 @@ def run_task(task_path):
         input_file = os.path.join(task_path, "txtf", "input.txt")
         output_file = os.path.join(task_path, "txtf", "output.txt")
 
-        main_file = os.path.join(src_path, "test1.py")
+        main_file = os.path.join(src_path, "main.py")
         if not os.path.exists(main_file):
-            raise FileNotFoundError(f"Файл test1.py не найден в папке '{src_path}'")
+            raise FileNotFoundError(f"Файл main.py не найден в папке '{src_path}'")
 
         # Динамический импорт test1.py
         spec = importlib.util.spec_from_file_location("main", main_file)
@@ -49,7 +49,7 @@ def run_task(task_path):
 
         # Проверяем наличие функции main
         if not hasattr(main_module, "main"):
-            raise AttributeError(f"В файле test1.py отсутствует функция 'main'")
+            raise AttributeError(f"В файле main.py отсутствует функция 'main'")
 
         print(f"  Запуск задачи: {os.path.basename(task_path)}")
         os.chdir(src_path)  # Переключаемся в директорию задачи
