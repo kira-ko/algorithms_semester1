@@ -35,19 +35,19 @@ Input / Output
 ## Запуск проекта
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/kira-ko/algoritms_labs
+   git clone https://github.com/username/repository-name.git
    ```
 2. Перейдите в папку с проектом:
    ```bash
    cd algoritms_labs/lab4
    ```
-3. Запустите программу:
-   ```bash
-   python task8/src/main.py
+3. Запустите все задачи лабораторной:
+```bash
+   python utils.py --tasks --lab lab4
    ```
-## Тестирование
 
-Для запуска тестов выполните:
-   ```bash
-   python task8/tests/test_task1.py
-   ```
+## Тестирование
+запустите все тесты лабораторной с помощью команды:
+```bash
+    pytest utils.py --tests --lab lab4
+```
