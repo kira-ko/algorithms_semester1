@@ -1,7 +1,6 @@
 import unittest
 
-from lab3.task4.src.main import count_segments  # Импортируйте вашу функцию из исходного кода
-
+from lab3.task4.src.main import count_segments
 
 class TestCountSegments(unittest.TestCase):
 
