@@ -17,12 +17,24 @@
 ## Описание
 Данная лабораторная работа посвящена методу Разделяй и властвуй, быстрой сортировке, а также сортировкам за линейное время.
 
-## Запуск проекта
-1. Клонируйте репозиторий:
-   ```bash
-   git clone https://github.com/kira-ko/algoritms_labs.git
-   ```
-2. Перейдите в папку с проектом:
-   ```bash
-   cd algoritms_labs/lab3
-   ```
+Инструкция по запуску
+----
+1. клонируйте репозиторий
+ ```bash
+git clone https://github.com/username/repository-name.git
+```
+2. перейдите в папку с проектом
+ ```bash
+cd algoritms_labs/lab3
+```
+3. Запуск всех задач:
+ ```bash
+python utils.py --tasks --lab lab3
+```
+
+Тестирование
+-----
+Для запуска всех тестов выполните:
+ ```bash
+python utils.py --tests --lab lab3
+```
