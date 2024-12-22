@@ -4,7 +4,7 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 Вариант 9
 
 ## Задание 5:
-![image](https://github.com/user-attachments/assets/03dd711b-cbc1-4f61-af93-ad70940ad1a4)
+Правило большинства — это когда выбирается элемент, имеющий больше половины голосов. Допустим, есть последовательность A элементов a1, a2, ...an, и нужно проверить, содержит ли она элемент, который появляется больше, чем n/2 раз.
 
 
 
@@ -36,19 +36,25 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 ## Запуск проекта
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/kira-ko/algs_labs.git
+   git clone https://github.com/username/repository-name.git
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd algs_labs/lab2/task5
+   cd algoritms_labs/lab2
    ```
 3. Запустите программу:
    ```bash
    python src/main.py
    ```
 
-4. Запуск тестов:
-   ```bash
-   python tests/test_task5.py
+или запустите все задачи лабораторной:
+```bash
+   python utils.py --tasks --lab lab2
    ```
+
+## Тестирование
+Для запуска тестов выполните:
+```bash
+    pytest tests/test_merge_sort.py
+```
 
