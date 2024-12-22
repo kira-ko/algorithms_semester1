@@ -4,8 +4,7 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 Вариант 9
 
 ## Задание 4:
-![image](https://github.com/user-attachments/assets/577cfd95-4db3-4041-9475-d1fe41c0e18d)
-
+В этой задаче вы реализуете алгоритм бинарного поиска, который позволяет очень эффективно искать (даже в огромных) списках при условии, что список отсортирован. Цель - реализация алгоритма двоичного (бинарного) поиска.
 
 ## Input / Output 
 
@@ -32,22 +31,24 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 ## Запуск проекта
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/kira-ko/asd.lab.git
+   git clone https://github.com/username/repository-name.git
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd.lab/lab2/task4
+   cd algoritms_labs/lab2
    ```
 3. Запустите программу:
    ```bash
    python src/bin_search.py
    ```
 
-4. Запуск тестов:
-   ```bash
-   python tests/bin_search_test.py
+или запустите все задачи лабораторной:
+```bash
+   python utils.py --tasks --lab lab2
    ```
 
 ## Тестирование
 Для запуска тестов выполните:
 ```bash
+    pytest tests/test_merge_sort.py
+```
