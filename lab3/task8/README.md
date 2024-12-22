@@ -28,7 +28,7 @@ Input / Output
 - Ограничение по времени. 10сек.
 - Ограничение по памяти. 256 мб.
 
-##Структура проекта:
+Структура проекта:
 -------
 * task8/ - папка со всеми файлами для задачи
 * src/ - исходный код программы
@@ -38,19 +38,19 @@ Input / Output
 ## Запуск проекта
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/kira-ko/algs_labs
+   git clone https://github.com/username/repository-name.git
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd asd.lab/lab3
+   cd algoritms_labs/lab3
    ```
-3. Запустите программу:
-   ```bash
-   python task8/src/main.py
+3. Запустите все задачи лабораторной:
+```bash
+   python utils.py --tasks --lab lab3
    ```
-## Тестирование
 
-Для запуска тестов выполните:
-   ```bash
-   python task8/tests/test_task1.py
-   ```
+## Тестирование
+запустите все тесты лабораторной с помощью команды:
+```bash
+    pytest utils.py --tests --lab lab3
+```
