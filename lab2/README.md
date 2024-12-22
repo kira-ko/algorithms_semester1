@@ -4,11 +4,11 @@
 
 ## Навигация
 
-1. Задача 1: [Сортировка вставкой](https://github.com/kira-ko/algoritms_labs/tree/main/lab1/task1)
-2. Задача 2: [Сортировка вставкой +](https://github.com/kira-ko/algoritms_labs/tree/main/lab1/task2)
-3. Задача 3: [Сортировка втсавкой по убыванию](https://github.com/kira-ko/algoritms_labs/tree/main/lab1/task3)
-4. Задача 5: [Сортировка выбором](https://github.com/kira-ko/algoritms_labs/tree/main/lab1/task5)
-5. Задача 6: [Пузырьковая сортировка](https://github.com/kira-ko/algoritms_labs/tree/main/lab1/task6)
+1. Задача 1: []()
+2. Задача 3: []()
+3. Задача 3: []()
+4. Задача 5: []()
+5. Задача 6: []()
 
 Краткое описание:
 ------
