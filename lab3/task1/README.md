@@ -38,16 +38,16 @@ Input / Output
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd algoritms_labs/lab2
+   cd algoritms_labs/lab3
    ```
 3. Запустите все задачи лабораторной:
 ```bash
-   python utils.py --tasks --lab lab2
+   python utils.py --tasks --lab lab3
    ```
 
 ## Тестирование
 запустите все тесты лабораторной с помощью команды:
 ```bash
-    pytest utils.py --tests --lab lab2
+    pytest utils.py --tests --lab lab3
 ```
 
