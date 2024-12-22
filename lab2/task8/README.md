@@ -4,9 +4,27 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 Вариант 9
 
 ## Задание 8:
-![image](https://github.com/user-attachments/assets/edfce521-66d4-441b-bf78-0138cf12a6a3)
-![image](https://github.com/user-attachments/assets/9888f5d3-58be-446a-93b5-b513f139ea0e)
-
+Выдающийся немецкий математик Карл Фридрих Гаусс (1777––1855) заметил,
+что хотя формула для произведения двух комплексных чисел (a + bi)(c + di) =
+ac − bd + (bc + ad)i содержит четыре умножения вещественных чисел, можно
+обойтись и тремя: вычислим ac, bd и (a + b)(c + d) и воспользуемся тем, что
+bc + ad = (a + b)(c + d) − ac − bd.
+Задача. Даны 2 многочлена порядка n − 1: an−1x
+n−1 + an−2x
+n−1 + ... +
+a1x + a0 и bn−1x
+n−1 + bn−2x
+n−1 + ... + b1x + b0. Нужно получить произведение:
+7
+c2n−2x
+2n−2 + c2n−3x
+2n−3 + ... + c1x + c0, где:
+c2n−2 = an−1bn−1
+c2n−3 = an−1bn−2 + an−2bn−1
+... ...
+c2 = a2b0 + a1b1 + a0b2
+c1 = a1b0 + a0b1
+c0 = a0b0
 
 
 
@@ -34,18 +52,29 @@ Cтудентка ИТМО, Коновалова Кира Романовна, 47
 ## Запуск проекта
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/kira-ko/algs_labs.git
+   git clone https://github.com/username/repository-name.git
    ```
 2. Перейдите в папку с проектом:
    ```bash
-   cd algs_labs/lab2/task8
+   cd algoritms_labs/lab2
    ```
 3. Запустите программу:
    ```bash
    python src/main.py
    ```
 
-4. Запуск тестов:
-   ```bash
-   python tests/test_task8.py
+или запустите все задачи лабораторной:
+```bash
+   python utils.py --tasks --lab lab2
    ```
+
+## Тестирование
+Для запуска тестов выполните:
+```bash
+    pytest tests/test_merge_sort.py
+```
+
+или запустите все тесты лабораторной с помощбю команды:
+```bash
+    pytest utils.py --tests --lab lab2
+```
