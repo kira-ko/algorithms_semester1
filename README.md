@@ -73,4 +73,8 @@
    python utils.py --tests --all
    ```
 
+## Запуск всего
+```bash
+   python utils.py --both
+   ```
 
